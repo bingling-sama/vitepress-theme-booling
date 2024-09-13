@@ -3,17 +3,12 @@ import Layout from './Layout.vue'
 import type { Theme } from 'vitepress'
 import './style.css'
 
-import PrimeVue from "primevue/config"
-import Aura from "@primevue/themes"
+import PrimeVueStyled from "primevue/config"
 
 export default {
 	Layout,
 	enhanceApp({ app, router, siteData }) {
 		// ...
-		app.use(PrimeVue, {
-			theme: {
-				preset: Aura
-			}
-		})
+		app.use(PrimeVueStyled)
 	}
 } satisfies Theme
